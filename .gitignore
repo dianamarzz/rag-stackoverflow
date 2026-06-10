@@ -12,3 +12,5 @@ data/index/
 *.egg-info/
 dist/
 .pytest_cache/
+.DS_Store
+uv.lock
