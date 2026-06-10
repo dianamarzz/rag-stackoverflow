@@ -10,7 +10,7 @@
 
 ## Комментарий
 
-**Данные:** датасет [stackoverflow/stacksample](https://www.kaggle.com/datasets/stackoverflow/stacksample) (Kaggle, CC BY-SA 3.0) — 1 000 Python-вопросов с принятыми ответами (фильтр: тег `python`, score ≥ 5). Вопрос и принятый ответ объединяются в одно текстовое поле и нарезаются на ~3 800 чанков.
+**Данные:** датасет [stackoverflow/stacksample](https://www.kaggle.com/datasets/stackoverflow/stacksample) (Kaggle, CC BY-SA 3.0) — 1 000 Python-вопросов с принятыми ответами (фильтр: тег `python`, score ≥ 5). Вопрос и принятый ответ объединяются в одно текстовое поле и нарезаются на более 4 000 чанков.
 
 **Pipeline:** `prepare_datasets.py → ingest.py → build_index.py (chunking + TF-IDF + BM25) → retrieval → generation → Streamlit UI`.
 
