@@ -35,14 +35,14 @@ uv run python scripts/build_index.py
   RAG StackOverflow — Build Index
 ==================================================
 [load]   Документов: 1,000
-[chunk]  Всего чанков: 3,847
-[tfidf]  Матрица: 3847 чанков × 28614 признаков
+[chunk]  Всего чанков: 4,265
+[tfidf]  Матрица: 4,265 чанков × 47918 признаков
 [tfidf]  Сохранено → vectorizer.pkl, matrix.npz
 [bm25]   Сохранено → bm25.pkl
 
 ✅ Индекс успешно построен!
    Документов : 1,000
-   Чанков     : 3,847
+   Чанков     : 4,265
 ```
 
 ### 3. Запустить интерфейс
@@ -51,7 +51,7 @@ uv run python scripts/build_index.py
 uv run streamlit run app/main.py
 ```
 
-Откроется браузер: `http://localhost:8501`
+Откроется браузер
 
 ---
 
@@ -68,34 +68,14 @@ uv run streamlit run app/main.py
 
 ## Демо-ответы
 
-**Запрос:** *How do I check if a list is empty in Python?*
+<img width="1250" height="705" alt="Screenshot 2026-06-10 at 10 49 39 PM" src="https://github.com/user-attachments/assets/641cc777-965b-47b0-8cd0-e87791ea204b" />
 
-```
-На основе найденных фрагментов Stack Overflow:
+<img width="1239" height="659" alt="Screenshot 2026-06-10 at 10 50 21 PM" src="https://github.com/user-attachments/assets/23ff6aa9-f1f6-4ba2-9ad9-bd1507bfb659" />
 
-Q: How do I check if a list is empty?
-A: The most Pythonic way to check if a list is empty is:
+<img width="1231" height="672" alt="Screenshot 2026-06-10 at 10 50 37 PM" src="https://github.com/user-attachments/assets/9516f123-f13e-430a-8344-5c813dde68b1" />
 
-    if not a:
-        print("List is empty")
+<img width="1244" height="643" alt="Screenshot 2026-06-10 at 11 01 07 PM" src="https://github.com/user-attachments/assets/8b4976e4-00a1-4ea4-b1c3-88c24b21ae00" />
 
-Using the implicit booleanness of the empty list is quite Pythonic.
-Empty sequences are False, so bool([]) is False.
-Alternatively: if len(a) == 0 — but this is less idiomatic.
-
----
-📚 Источники:
-• [How do I check if a list is empty?](https://stackoverflow.com/questions/11227809)  (score: 10.927)
-```
-
-**Запрос:** *What is the best recipe for a chocolate cake?*
-
-```
-❌ В базе знаний не найдено релевантной информации по вашему запросу.
-
-Попробуйте переформулировать вопрос или убедитесь,
-что он касается Python-программирования.
-```
 
 ---
 
@@ -124,7 +104,7 @@ tests/test_retrieval.py::test_is_relevant_returns_false_for_zero_score        PA
 tests/test_retrieval.py::test_is_relevant_returns_true_for_high_score         PASSED
 tests/test_retrieval.py::test_tfidf_unrelated_query_scores_lower_than_related PASSED
 
-17 passed in 1.15s
+17 passed in 3.03s
 ```
 
 ---
