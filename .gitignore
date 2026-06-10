@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.env
+*.pkl
+*.npz
+data/raw/kaggle_raw/
+data/processed/
+data/index/
+.streamlit/
+*.egg-info/
+dist/
+.pytest_cache/
